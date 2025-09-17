@@ -63,7 +63,7 @@ body{
     border-bottom: 3px solid var(--main-color);
 }
 #menu-icon{
-    font: size 3.6rem;
+    font-size: 3.6rem;
     color:var(--main-color);
     display: none;
 }
@@ -92,7 +92,7 @@ span{
 color:var(--main-color);
 }
 .home-content h3{
-margin: bottom 2rem;
+margin-bottom: 2rem;
 margin-top:1rem;
 font-size:3.5rem;
 
@@ -114,7 +114,7 @@ font-size:3.5rem;
     border-radius: 50%;
     box-shadow:0 0 25px var(--main-color);
     cursor: pointer;
-    transition: 0.4sec ease-in-out;
+    transition: 0.4s ease-in-out;
 
 }
 .home-img img:hover{
@@ -170,7 +170,7 @@ font-size:3.5rem;
 }
 .btn:hover{
     transform: scale(1.05);
-    box-shadow: #503e3e;
+    box-shadow:0 0 25px #503e3e;
 
 }
 .btn-group{
@@ -185,7 +185,7 @@ font-size:3.5rem;
     box-shadow: 0 0 25px transparent;
 
 }
-.btn-groupa:nth-of-type(2):hover{
+.btn-group a:nth-of-type(2):hover{
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
     color: #b3928a;
@@ -196,30 +196,38 @@ font-size:3.5rem;
     margin:5rem 0;
 }
 .education{
+    display: flex;
+    flex-direction: column;
+    
     padding:100px 15px;
     background: var(--second-bg-color);
 }
 .education h2{
+    align-items: right;
     margin-bottom: 5rem;
 }
 .timeline-items{
-    max-width: 11200px;
+    max-width: 1120px;
     margin: auto;
     display:flex;
     flex-wrap: wrap;
     position: relative;
+    height:100%;
 }
-.timeline-items::before{
+ .timeline-items::before{
     content:"";
     position: absolute;
-    width:5px;
-    height:100%;
+    top: 0;
+    bottom: 0;
+    width:8px;
+    
     background-color: var(--main-color);
-    left: calc(50% - 1px);
+    left: calc(50% - 1px); 
 }
 .timeline-item{
+      
     margin-bottom: 40px;
-    width: 100%;
+    max-width: 1600px;
     position: relative;
 }
 .timeline-item:last-child{
@@ -227,13 +235,14 @@ font-size:3.5rem;
 }
 .timeline-item:nth-child(odd){
     padding-right: calc(50% + 30px);
-    text-align:right;
+  
 }
+
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
     
 }
-/* .timeline.dot{
+.timeline-dot{
     height: 21px;
     width:21px;
     background-color: var(--main-color);
@@ -243,8 +252,8 @@ font-size:3.5rem;
     left:calc(50% - 8px);
     border-radius:50%;
     top:10px;
-} */
-.timeline.date{
+}
+.timeline-date{
     font-size: 20px;
     font-weight:800;
     color:rgb(95, 67, 67);
@@ -290,5 +299,3 @@ font-size:3.5rem;
     background-color: var(--bg-color);
     border-radius: 10px;
 }
-
-
